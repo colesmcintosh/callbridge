@@ -1,0 +1,33 @@
+{
+  "name": "callbridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Reviewable, evidence-backed CRM notes from call transcripts.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env.local src/server.js",
+    "dev": "node --watch --env-file-if-exists=.env.local src/server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/server.js && node --check src/domain.js && node --check src/providers.js && node --check src/store.js && node --check src/mock-hubspot.js && node --check src/extraction-preview.js && node --check public/stream.js && node --check public/app.js"
+  },
+  "license": "MIT",
+  "author": "Cole McIntosh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colesmcintosh/callbridge.git"
+  },
+  "homepage": "https://github.com/colesmcintosh/callbridge#readme",
+  "bugs": {
+    "url": "https://github.com/colesmcintosh/callbridge/issues"
+  },
+  "keywords": [
+    "crm",
+    "hubspot",
+    "openai",
+    "transcription",
+    "call-notes"
+  ]
+}
